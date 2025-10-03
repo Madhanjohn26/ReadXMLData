@@ -1,7 +1,9 @@
 package org.sample;
 
 import java.io.File;
+import java.util.List;
 
+import org.pojo.Emp;
 import org.pojo.Employee;
 
 import jakarta.xml.bind.JAXBContext;
@@ -21,24 +23,33 @@ public class Sample {
 		Object object = un.unmarshal(xmlPath);
 		//type case higher to lower object to class
 		Employee e = (Employee)object;
-		System.out.println(e.getEmpId());
-		System.out.println(e.getName());
-		System.out.println(e.getEmailId());
-		System.out.println(e.getPhoneNo());
 		
-		//permanent address class value
+		List<Emp> empTableValue = e.getEmp();
 		
-		System.out.println("Permanent Address");
-		System.out.println(e.getAddress().getPermanentAddress().getStreetName());
-		System.out.println(e.getAddress().getPermanentAddress().getCityName());
-		System.out.println(e.getAddress().getPermanentAddress().getDistrict());
-		System.out.println(e.getAddress().getPermanentAddress().getState());
+		for (Emp empEachDetails : empTableValue) {
+			
+			//emp table values
+			System.out.println(empEachDetails.getEmpId());
+			System.out.println(empEachDetails.getName());
+			System.out.println(empEachDetails.getEmailId());
+			System.out.println(empEachDetails.getPhoneNo());
+			
+			//Permanent Address values
+			System.out.println(empEachDetails.getAddress().getPermanentAddress().getStreetName());
+			System.out.println(empEachDetails.getAddress().getPermanentAddress().getCityName());
+			System.out.println(empEachDetails.getAddress().getPermanentAddress().getDistrict());
+			System.out.println(empEachDetails.getAddress().getPermanentAddress().getState());
+			
+			//Temporary Address
+			System.out.println(empEachDetails.getAddress().getTemporaryAddress().getStreetName());
+			System.out.println(empEachDetails.getAddress().getTemporaryAddress().getCityName());
+			System.out.println(empEachDetails.getAddress().getTemporaryAddress().getDistrict());
+			System.out.println(empEachDetails.getAddress().getTemporaryAddress().getState());
+			
+			
+		}
 		
-		System.out.println("Temporary Address");
-		System.out.println(e.getAddress().getTemporaryAddress().getStreetName());
-		System.out.println(e.getAddress().getTemporaryAddress().getCityName());
-		System.out.println(e.getAddress().getTemporaryAddress().getDistrict());
-		System.out.println(e.getAddress().getTemporaryAddress().getState());
+		
 	}
 	
 	public static void main(String[] args) throws JAXBException

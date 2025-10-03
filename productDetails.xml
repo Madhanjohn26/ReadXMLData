@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<productDetails>
+	<product>
+		<id>1</id>
+		<name>Samsung</name>
+	</product>
+	<product>
+		<id>2</id>
+		<name>OPPO</name>
+	</product>
+</productDetails>

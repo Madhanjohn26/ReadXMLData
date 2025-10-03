@@ -1,22 +1,47 @@
 <employee>
-	<empId>123</empId>
-	<name>Madhan</name>
-	<emailId>madhan123@gmail.com</emailId>
-	<phoneNo>6369980979</phoneNo>
+	<emp>
+		<empId>123</empId>
+		<name>Madhan</name>
+		<emailId>madhan123@gmail.com</emailId>
+		<phoneNo>6369980979</phoneNo>
 
-	<address>
-		<permanentAddress>
-			<streetName>Urbanrise Street</streetName>
-			<cityName>Chennai</cityName>
-			<district>Chengalpattu</district>
-			<state>Tamilnadu</state>
-		</permanentAddress>
+		<address>
+			<permanentAddress>
+				<streetName>Urbanrise Permanent Street</streetName>
+				<cityName>Chennai</cityName>
+				<district>Chengalpattu</district>
+				<state>Tamilnadu</state>
+			</permanentAddress>
 
-		<temporaryAddress>
-			<streetName>Urbanrise Street</streetName>
-			<cityName>Chennai</cityName>
-			<district>Chengalpattu</district>
-			<state>Tamilnadu</state>
-		</temporaryAddress>
-	</address>
+			<temporaryAddress>
+				<streetName>Urbanrise temporary bStreet</streetName>
+				<cityName>Chennai</cityName>
+				<district>Chengalpattu</district>
+				<state>Tamilnadu</state>
+			</temporaryAddress>
+		</address>
+	</emp>
+	
+	<emp>
+		<empId>234</empId>
+		<name>jairo</name>
+		<emailId>jairo123@gmail.com</emailId>
+		<phoneNo>6369980000</phoneNo>
+
+		<address>
+			<permanentAddress>
+				<streetName>sanjeev Permanent Street</streetName>
+				<cityName>Vellore</cityName>
+				<district>Vellore</district>
+				<state>Tamilnadu</state>
+			</permanentAddress>
+
+			<temporaryAddress>
+				<streetName>sanjeev Temporary Street</streetName>
+				<cityName>bagayam</cityName>
+				<district>vellore</district>
+				<state>Tamilnadu</state>
+			</temporaryAddress>
+		</address>
+	</emp>
 </employee>
